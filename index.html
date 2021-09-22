@@ -5,14 +5,14 @@
     <title>Title</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="node_modules/lightgallery/css/lightgallery-bundle.css">
+    <link rel="stylesheet" href="node_modules/lightgallery/css/lightgallery.css">
 </head>
 <body>
 <div class="header">
     <i class="far fa-image fa-10x"></i>
 </div>
-<div class="main">
-    <div class="imgfirstrow">
+<div class="main" id="main">
+    <div class="imgfirstrow" id="firstrow">
         <a href="img1.jpg">
             <img src="img1.jpg" height="180" width="320"/>
         </a>
@@ -23,7 +23,7 @@
             <img src="img3.jpg" height="180" width="320"/>
         </a>
     </div>
-    <div class="imgsecondrow">
+    <div class="imgsecondrow" id="secondrow">
         <a href="img4.jpg">
             <img src="img4.jpg" height="180" width="320"/>
         </a>
@@ -35,5 +35,11 @@
         </a>
     </div>
 </div>
+<script src="node_modules/lightgallery/lightgallery.min.js"></script>
+<script type="text/javascript">
+    lightGallery(document.getElementById('main'), {
+        selector: 'a'
+    });
+</script>
 </body>
 </html>
